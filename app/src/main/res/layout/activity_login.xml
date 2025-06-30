@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Activity.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="100"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chatly"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"
+            android:textSize="60sp"
+            android:fontFamily="@font/denk_one"
+            android:layout_weight="10">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/phone"
+            android:tint="@color/photoRed"
+            tools:ignore="UseAppTint"
+            android:layout_weight="7">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/ll_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/country_code_picker"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                app:ccp_showFlag="false"
+                app:ccp_showNameCode="false"
+                app:ccpDialog_backgroundColor="@color/white"
+                android:background="@drawable/code_picker_round_corner"
+                android:gravity="center"
+                android:layout_gravity="center_vertical">
+
+            </com.hbb20.CountryCodePicker>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobile_number_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="@color/lightBlack"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:hintEnabled="false"
+                app:cursorColor="@color/lightBlack"
+                android:layout_marginStart="6dp"
+                android:layout_gravity="center_vertical">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobile_number_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:maxLength="12">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_send_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/send_otp_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/my_primary_light"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/my_primary">
+
+                <TextView
+                    android:id="@+id/send_otp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEND OTP"
+                    android:textColor="@color/my_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center">
+
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/send_otp_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:indeterminateTint="@color/my_primary"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                </ProgressBar>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_otp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="100"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chatly"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"
+            android:textSize="60sp"
+            android:fontFamily="@font/denk_one"
+            android:layout_weight="10">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/otp"
+            android:tint="@color/photoRed"
+            tools:ignore="UseAppTint"
+            android:layout_weight="7">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/ll_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otp_edit_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="@color/lightBlack"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:hintTextColor="@color/lightBlack"
+                app:cursorColor="@color/lightBlack"
+                android:layout_marginStart="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otp_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="OTP"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="6">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/verify_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/my_primary_light"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/my_primary">
+
+                <TextView
+                    android:id="@+id/verify_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VERIFY"
+                    android:textColor="@color/my_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center">
+
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/verify_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:indeterminateTint="@color/my_primary"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                </ProgressBar>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resend_otp_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="RESEND OTP"
+            android:textSize="16sp"
+            android:textColor="@color/light_gray">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_username"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="100"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chatly"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"
+            android:textSize="60sp"
+            android:fontFamily="@font/denk_one"
+            android:layout_weight="10">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/user"
+            android:tint="@color/photoRed"
+            tools:ignore="UseAppTint"
+            android:layout_weight="7">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/ll_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_edit_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="@color/lightBlack"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:hintTextColor="@color/lightBlack"
+                app:cursorColor="@color/lightBlack"
+                android:layout_marginStart="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:maxLines="1">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_let_me_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/let_me_in_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/my_primary_light"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/my_primary">
+
+                <TextView
+                    android:id="@+id/let_me_in_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LET ME IN"
+                    android:textColor="@color/my_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center">
+
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/let_me_in_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:indeterminateTint="@color/my_primary"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                </ProgressBar>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Chatly" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!--  Primary brand color.  -->
+        <item name="colorPrimary">@color/lightBlack</item>
+        <item name="colorPrimaryVariant">@color/lightBlack</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--  Secondary brand color.  -->
+        <item name="colorSecondary">@color/lightBlack</item>
+        <item name="colorSecondaryVariant">@color/lightBlack</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--  Status bar color.  -->
+        <item name="android:statusBarColor">@color/my_primary</item>
+        <!--  Customize your theme here.  -->
+        <item name="android:windowBackground">@color/off_white</item>
+
+    </style>
+
+    <style name="Theme.Chatly" parent="Base.Theme.Chatly" />
+
+    <style name="Splash.Theme.Chatly" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!--  Primary brand color.  -->
+        <item name="colorPrimary">@color/lightBlack</item>
+        <item name="colorPrimaryVariant">@color/lightBlack</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--  Secondary brand color.  -->
+        <item name="colorSecondary">@color/lightBlack</item>
+        <item name="colorSecondaryVariant">@color/lightBlack</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--  Status bar color.  -->
+        <item name="android:statusBarColor">@color/off_white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!--  Customize your theme here.  -->
+        <item name="android:windowBackground">@color/off_white</item>
+
+    </style>
+
+</resources>

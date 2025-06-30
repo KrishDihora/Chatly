@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" tools:node="remove"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".View.Activity.ChatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Chatly">
+
+        </activity>
+        <activity
+            android:name=".View.Activity.SearchUserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Chatly"></activity>
+        <activity
+            android:name=".View.Activity.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Splash.Theme.Chatly" />
+        <activity
+            android:name=".View.Activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Splash.Theme.Chatly">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".View.Activity.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Chatly" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" >
+
+        </meta-data>
+
+        <service android:name=".Util.FirebaseUtil.FCMNotificationService" android:exported="false">
+            <intent-filter>
+                <action  android:name="com.google.firebase.MESSAGING_EVENT"></action>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
