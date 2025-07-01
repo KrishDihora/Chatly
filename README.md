@@ -4,7 +4,7 @@ Developed an Android chat application focused on enabling easy and real-time com
 Developed in Java, integrated Firebase Authentication for user login, Firebase Cloud Firestore for chat storage, and used OkHttp for API communication.
 
 ## Mockups
-
+![](Mockups/WhatsApp Image 2025-07-01 at 8.37.07 AM.jpeg)
 
 ## User Credentials
 MobileNumber: 99999 99991 &emsp; VerificationCode: 111111<br>
