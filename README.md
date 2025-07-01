@@ -5,9 +5,9 @@ Developed in Java, integrated Firebase Authentication for user login, Firebase C
 
 ## Mockups
 <p align="center">
-  <img src="mockup/chat_screen.jpeg" width="300" height="525"/>
-  <img src="mockup/message_screen.jpeg" width="300" height="525"/>
-  <img src="mockup/search_screen.jpeg" width="300" height="525"/>
+  <img src="mockup/chat_screen.jpeg" width="250" height="525"/>
+  <img src="mockup/message_screen.jpeg" width="250" height="525"/>
+  <img src="mockup/search_screen.jpeg" width="250" height="525"/>
 </p>
 
 ## User Credentials
