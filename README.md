@@ -4,10 +4,10 @@ Developed an Android chat application focused on enabling easy and real-time com
 Developed in Java, integrated Firebase Authentication for user login, Firebase Cloud Firestore for chat storage, and used OkHttp for API communication.
 
 ## Mockups
-<p>
-  <img src="mockup/chat_screen.jpeg" width="250" height="550"/>
-  <img src="mockup/message_screen.jpeg" width="250" height="550"/>
-  <img src="mockup/search_screen.jpeg" width="250" height="550"/>
+<p align="center">
+  <img src="mockup/chat_screen.jpeg" width="250" height="550"/> &emsp;
+  <img src="mockup/message_screen.jpeg" width="250" height="550"/> &emsp;
+  <img src="mockup/search_screen.jpeg" width="250" height="550"/> 
 </p>
 
 ## User Credentials
